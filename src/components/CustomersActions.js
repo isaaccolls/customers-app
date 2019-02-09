@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerActions = {children} => {
+const CustomersActions = ({ children }) => {
+    console.log(children);
     return (
         <div>
-            <div className="customer-actions">
+            <div className="customers-actions">
                 <div>{children}</div>
             </div>
         </div>
     );
 };
 
-CustomerActions.propTypes = {
+CustomersActions.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default CustomerActions;
+export default CustomersActions;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'l
 
-const CustomersList = ({customers}) => {
+const CustomersList = ({ customers }) => {
     return (
         <div>
             <div className="customers-list">

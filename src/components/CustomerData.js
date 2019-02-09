@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerData = ({name, dni, age}) => {
+const CustomerData = ({ name, dni, age }) => {
     return(
         <div>
             <div className="customer-data">

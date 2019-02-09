@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerEdit = ({name, dni, age}) => {
+const CustomerEdit = ({ name, dni, age }) => {
     return (
         <div>
             <h2>Ediccion del cliente</h2>

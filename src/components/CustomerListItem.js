@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerListItem = ({name, editAction, delAction, urlPath}) => {
+const CustomerListItem = ({ name, editAction, delAction, urlPath }) => {
     return (
         <div>
             <div className="customer-list-item">
