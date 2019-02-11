@@ -1,4 +1,4 @@
-## Desing
+## Design
 [https://www.udemy.com/react-js-redux-es6-completo-de-0-a-experto-espanol/learn/v4/t/lecture/8955830?start=30](https://www.udemy.com/react-js-redux-es6-completo-de-0-a-experto-espanol/learn/v4/t/lecture/8955830?start=30)
 
 ## Routes structure
