@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import HomeContainer from './containers/HomeContainer';
+import CustomersContainer from './containers/CustomersContainer';
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={HomeContainer} />
-          <Route exact path="/customers" component={this.renderCustomerListContainer} />
+          <Route exact path="/customers" component={CustomersContainer} />
           <Switch>
             <Route path="/customers/new" component={this.renderCustomerNewContainer} />
             <Route path="/customers/:dni" component={this.renderCustomerContainer} />
