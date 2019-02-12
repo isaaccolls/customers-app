@@ -7,24 +7,6 @@ import CustomersList from '../components/CustomersList';
 import CustomersActions from '../components/CustomersActions';
 import { fetchCustomers } from '../actions/fetchCustomers';
 
-const customers = [
-    {
-        "dni" : "420000",
-        "name": "Bob Marley",
-        "age": 37,
-    },
-    {
-        "dni" : "421000",
-        "name": "Kurt Cobain",
-        "age": 46,
-    },
-    {
-        "dni" : "422000",
-        "name": "Janis Joplin",
-        "age": 21,
-    },
-];
-
 class CustomersContainer extends Component {
 
     componentDidMount() {
@@ -38,7 +20,7 @@ class CustomersContainer extends Component {
     renderBody = () => (
         <div>
             <CustomersList
-                customers={customers}
+                customers={this.props.customers}
                 urlPath={'customer/'}
             ></CustomersList>
             <CustomersActions>
@@ -52,7 +34,7 @@ class CustomersContainer extends Component {
             <div>
                 <AppFrame
                     header={'Listado de clientes'}
-                    body={this.renderBody(customers)}
+                    body={this.renderBody(this.props.customers)}
                 ></AppFrame>
             </div>
         );
@@ -61,6 +43,11 @@ class CustomersContainer extends Component {
 
 CustomersContainer.propTypes = {
     fetchCustomers: PropTypes.func.isRequired,
+    customers: PropTypes.array.isRequired,
+};
+
+CustomersContainer.defaultProps = {
+    customers: []
 };
 
 // const mapDispatchToProps = dispatch => (
