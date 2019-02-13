@@ -20,4 +20,4 @@ const customers = [
     ]
 
 // export const fetchCustomers = () => ({ type: 'FETCH_CUSTOMERS', payload: null });
-export const fetchCustomers = createAction(FETCH_CUSTOMERS);
+export const fetchCustomers = createAction(FETCH_CUSTOMERS, () => customers);
