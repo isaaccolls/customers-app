@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
+import { setPropsAsInitial } from '../helpers/setPropsAsInitial';
 
 const CustomerEdit = ({ name, dni, age }) => {
     return (
         <div>
             <h2>Ediccion del cliente</h2>
-            <h3>Nombre: {name} / DNI: {dni} / Edad: {age}</h3>
             <form action="">
                 <div>
                     <label htmlFor="name">Nombre</label>
@@ -31,4 +31,7 @@ CustomerEdit.propTypes = {
     age: PropTypes.number,
 };
 
-export default reduxForm({ form: 'CustomerEdit' })(CustomerEdit);
+const CustomerEditForm = reduxForm({ form: 'CustomerEdit' })(CustomerEdit);
+
+// export default reduxForm({ form: 'CustomerEdit' })(CustomerEdit);
+export default setPropsAsInitial(CustomerEditForm);
