@@ -36,7 +36,7 @@ const MyField = ({input, meta, type, label, name}) => (
     </div>
 );
 
-const CustomerEdit = ({ name, dni, age, handleSubmit, submitting }) => {
+const CustomerEdit = ({ name, dni, age, handleSubmit, submitting, onBack }) => {
     return (
         <div>
             <h2>Ediccion del cliente</h2>
@@ -57,6 +57,7 @@ const CustomerEdit = ({ name, dni, age, handleSubmit, submitting }) => {
                     label="Age"></Field>
                 <CustomersActions>
                     <button type="submit" disabled={submitting}>Aceptar</button>
+                    <button onClick={onBack}>Cancelar</button>
                 </CustomersActions>
             </form>
         </div>
@@ -67,6 +68,7 @@ CustomerEdit.propTypes = {
     name: PropTypes.string,
     dni: PropTypes.string,
     age: PropTypes.number,
+    onBack: PropTypes.func.isRequired,
 };
 
 const CustomerEditForm = reduxForm(
