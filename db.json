@@ -1,19 +1,22 @@
 {
   "customers": [
     {
-        "dni" : "420000",
-        "name": "Bob Marley",
-        "age": 37
+      "id": "420000",
+      "dni": "420000",
+      "name": "Bob Marley!!",
+      "age": "21"
     },
     {
-        "dni" : "421000",
-        "name": "Kurt Cobain",
-        "age": 46
+      "id": "421000",
+      "dni": "421000",
+      "name": "Kurt Cobain test",
+      "age": "27"
     },
     {
-        "dni" : "422000",
-        "name": "Janis Joplin",
-        "age": 21
+      "id": "422000",
+      "dni": "422000",
+      "name": "Janis Joplin",
+      "age": 21
     }
   ],
   "posts": [
