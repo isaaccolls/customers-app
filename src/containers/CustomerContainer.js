@@ -27,12 +27,18 @@ class CustomerContainer extends Component {
         this.props.history.goBack();
     }
 
+    handleOnSubmitSuccess = () => {
+        console.log("handleOnSubmitSuccess started");
+        this.props.history.goBack();
+    }
+
     renderBody = () => (
         <Route path="/customers/:dni/edit" children={
             ({ match }) =>  {
                 const CustomerControl = match ? CustomerEdit : CustomerData;
                 return <CustomerControl {...this.props.customer}
                     onSubmit={this.handleSubmit}
+                    onSubmitSuccess={this.handleOnSubmitSuccess}
                     onBack={this.handleOnBack}
                     />;
             }
