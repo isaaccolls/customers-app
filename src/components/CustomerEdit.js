@@ -42,6 +42,8 @@ const toUpper = value => value && value.toUpperCase();
 
 const toLower = value => value && value.toLowerCase();
 
+const onlyGrow = (value, previousValue, values) => value && previousValue && (value > previousValue ? value : previousValue);
+
 const CustomerEdit = ({ name, dni, age, handleSubmit, submitting, onBack }) => {
     return (
         <div>
@@ -63,7 +65,8 @@ const CustomerEdit = ({ name, dni, age, handleSubmit, submitting, onBack }) => {
                     type="number"
                     validate={isNumber}
                     label="Age"
-                    parse={toNumber}></Field>
+                    parse={toNumber}
+                    normalize={onlyGrow}></Field>
                 <CustomersActions>
                     <button type="submit" disabled={submitting}>Aceptar</button>
                     <button onClick={onBack}>Cancelar</button>
