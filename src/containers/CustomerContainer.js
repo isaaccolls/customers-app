@@ -28,7 +28,6 @@ class CustomerContainer extends Component {
     }
 
     handleOnSubmitSuccess = () => {
-        console.log("handleOnSubmitSuccess started");
         this.props.history.goBack();
     }
 
