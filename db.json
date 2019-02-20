@@ -1,10 +1,10 @@
 {
   "customers": [
     {
-      "id": "420000",
       "dni": "420000",
-      "name": "BOB MARLEY!",
-      "age": 27
+      "name": "Bob Marley!!",
+      "age": 21,
+      "id": "420000"
     },
     {
       "id": "421000",
