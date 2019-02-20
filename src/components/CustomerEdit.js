@@ -43,7 +43,7 @@ const toUpper = value => value && value.toUpperCase();
 
 const toLower = value => value && value.toLowerCase();
 
-const onlyGrow = (value, previousValue, values) => value && previousValue && (value > previousValue ? value : previousValue);
+const onlyGrow = (value, previousValue, values) => value && (!previousValue ? value : (value > previousValue ? value : previousValue));
 
 const CustomerEdit = ({ name, dni, age, handleSubmit, submitting, onBack, pristine, submitSucceeded }) => {
     return (
