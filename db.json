@@ -17,6 +17,12 @@
       "dni": "422000",
       "name": "Janis Joplin",
       "age": 21
+    },
+    {
+      "name": "NUEVO CLIENTE",
+      "dni": "420",
+      "age": 21,
+      "id": "qE6cZ2u"
     }
   ],
   "posts": [
