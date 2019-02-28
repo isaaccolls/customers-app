@@ -9,6 +9,7 @@ import CustomerData from '../components/CustomerData';
 import { fetchCustomers } from '../actions/fetchCustomers';
 import { updateCustomer } from '../actions/updateCustomer';
 import { SubmissionError } from 'redux-form';
+import { deleteCustomer } from '../actions/deleteCustomer';
 
 class CustomerContainer extends Component {
 
@@ -38,6 +39,7 @@ class CustomerContainer extends Component {
 
     handleOnDelete = () => {
         console.log("handleOnDelete started");
+        this.props.deleteCustomer("Udelk5O");
     }
 
     renderCustomerControl = (isEdit, isDelete) => {
@@ -83,6 +85,7 @@ CustomerContainer.propTypes = {
     customer: PropTypes.object,
     fetchCustomers: PropTypes.func.isRequired,
     updateCustomer: PropTypes.func.isRequired,
+    deleteCustomer: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state, props) => ({
@@ -91,5 +94,6 @@ const mapStateToProps = (state, props) => ({
 
 export default withRouter(connect(mapStateToProps, {
     fetchCustomers,
-    updateCustomer
+    updateCustomer,
+    deleteCustomer,
 })(CustomerContainer));
