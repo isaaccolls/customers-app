@@ -15,8 +15,9 @@
     {
       "id": "422000",
       "dni": "422000",
-      "name": "Janis Joplin",
-      "age": 21
+      "name": "JANIS JOPLIN!",
+      "age": 21,
+      "isDeleteAllow": false
     }
   ],
   "posts": [
